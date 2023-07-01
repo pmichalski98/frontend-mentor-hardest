@@ -2,19 +2,21 @@ const asideData = ["YOUR INFO", "SELECT PLAN", "ADD-ONS", "SUMMARY"];
 
 export default function Home() {
   return (
-    <main className="flex justify-center items-center h-screen">
-      <div className="bg-white p-4 rounded-xl gap-20 flex">
-        <aside className=" bg-aside h-[568px] w-[274px] ">
+    <main className="flex justify-center items-center h-screen w-9/12 mx-auto container">
+      <div className="bg-secondary-alabaster p-4 rounded-xl gap-20 flex">
+        <aside className=" bg-aside min-h-[568px] min-w-[274px]">
           <ul className="">
             {asideData.map((data, index) => {
               return (
-                <li key={index} className="gap-4 mb-10 flex m-10">
-                  <div className=" outline outline-1 rounded-full w-8  flex items-center justify-center text-white h-8 outline-white">
+                <li key={index} className="gap-4  flex m-9  items-center">
+                  <div className=" outline outline-1 rounded-full w-8 shrink-0  flex items-center justify-center text-white h-8 outline-white">
                     {index + 1}
                   </div>
-                  <div>
-                    <span className="text-white ">STEP {index + 1}</span>
-                    <p className=" font-bold text-white">{data}</p>
+                  <div className="flex flex-wrap ">
+                    <span className="text-secondary-coolGray text-sm w-full">
+                      STEP {index + 1}
+                    </span>
+                    <p className="text-secondary-white font-medium  ">{data}</p>
                   </div>
                 </li>
               );
